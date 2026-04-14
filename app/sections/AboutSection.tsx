@@ -22,7 +22,7 @@ export default function AboutSection() {
             fill
             style={{ objectFit: 'cover', filter: 'brightness(0.82)' }}
           />
-          <div className={styles.badge}>Douala, Cameroun</div>
+          <div className={styles.badge}>Bafoussam, Cameroun</div>
         </div>
 
         <div className={styles.text}>
@@ -31,7 +31,7 @@ export default function AboutSection() {
             Votre Partenaire de<br />Confiance depuis 5 ans
           </h2>
           <p className={styles.sub}>
-            Basée à Douala, LongCourrier SARL est une entreprise polyvalente
+            Basée à Bafoussam, LongCourrier SARL est une entreprise polyvalente
             qui allie le savoir-faire du BTP à la rigueur des services
             comptables. Nous accompagnons particuliers et entreprises dans
             leurs projets de A à Z.

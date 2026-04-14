@@ -6,7 +6,7 @@ export default function HeroSection() {
     <section className={styles.hero}>
       <div className={styles.bg} />
       <div className={styles.content}>
-        <span className={styles.eyebrow}>Douala, Cameroun</span>
+        <span className={styles.eyebrow}>Bafoussam, Douala, Yaoundé et partout ailleurs</span>
         <h1 className={styles.title}>
           Bâtir & <em>Gérer</em><br />avec Excellence
         </h1>
