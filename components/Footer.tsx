@@ -16,10 +16,10 @@ export default function Footer() {
             style={{ objectFit: 'contain' }}
           />
           <p>BTP · Immobilier · Comptabilité</p>
-          <p>Douala, Cameroun</p>
+          <p>Bafoussam, Cameroun</p>
           <p className={styles.contact}>
-            📞 +237 6XX XXX XXX<br />
-            ✉️ contact@longcourrier.cm
+            📞 +237 620 804 291<br />
+            ✉️ contact@lclongcourrier.com
           </p>
         </div>
 

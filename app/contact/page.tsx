@@ -10,7 +10,7 @@ export default function ContactPage() {
           Contactez<br /><em>LongCourrier</em>
         </h1>
         <p className={styles.sub}>
-          Notre équipe à Douala est disponible pour répondre à toutes vos
+          Notre équipe à Bafoussam est disponible pour répondre à toutes vos
           questions, que ce soit pour un projet BTP, immobilier ou une
           mission comptable.
         </p>
@@ -23,23 +23,23 @@ export default function ContactPage() {
           <div className={styles.infoBlock}>
             <div className={styles.infoIcon}>📍</div>
             <h4>Adresse</h4>
-            <p>Douala, Cameroun</p>
+            <p>Bafoussam, Cameroun</p>
           </div>
           <div className={styles.infoBlock}>
             <div className={styles.infoIcon}>📞</div>
             <h4>Téléphone</h4>
-            <p>+237 6XX XXX XXX</p>
+            <p>+237 620 804 291</p>
           </div>
           <div className={styles.infoBlock}>
             <div className={styles.infoIcon}>✉️</div>
             <h4>Email</h4>
-            <p>contact@longcourrier.cm</p>
+            <p>contact@lclongcourrier.com</p>
           </div>
           <div className={styles.infoBlock}>
             <div className={styles.infoIcon}>🕐</div>
             <h4>Horaires</h4>
             <ul className={styles.hours}>
-              <li><span>Lundi – Vendredi</span><span>08h – 18h</span></li>
+              <li><span>Lundi – Vendredi</span><span>08h – 16h30</span></li>
               <li><span>Samedi</span><span>08h – 13h</span></li>
               <li><span>Dimanche</span><span>Fermé</span></li>
             </ul>
@@ -58,7 +58,7 @@ export default function ContactPage() {
               </div>
               <div className={styles.field}>
                 <label htmlFor="nom">Nom *</label>
-                <input type="text" id="nom" name="nom" placeholder="Dupont" required />
+                <input type="text" id="nom" name="nom" placeholder="Kamdem" required />
               </div>
             </div>
             <div className={styles.field}>

@@ -11,9 +11,7 @@ export default function HeroSection() {
           Bâtir & <em>Gérer</em><br />avec Excellence
         </h1>
         <p className={styles.desc}>
-          LongCourrier SARL est votre partenaire de confiance à Douala pour
-          tous vos projets de construction, d'immobilier et de gestion
-          comptable. De la fondation aux finances, nous assurons chaque
+          Long Courrier SARL est votre partenaire de confiance pouvant intervenir partout au Cameroun notamment dans les villes de Bafoussam, Douala et Yaoundé en ce qui concerne vos projets de construction, d’immobilier et de gestion comptable. De la fondation aux finances, nous assurons chaque
           étape avec rigueur.
         </p>
         <div className={styles.actions}>
