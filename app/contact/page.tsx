@@ -1,6 +1,44 @@
+'use client'
+
+import { useState } from 'react'
 import styles from './page.module.css'
 
 export default function ContactPage() {
+  const [loading, setLoading] = useState(false)
+  const [success, setSuccess] = useState(false)
+  const [error, setError] = useState(false)
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    setLoading(true)
+    setError(false)
+
+    const form = e.currentTarget
+    const data = {
+      prenom: (form.elements.namedItem('prenom') as HTMLInputElement).value,
+      nom: (form.elements.namedItem('nom') as HTMLInputElement).value,
+      email: (form.elements.namedItem('email') as HTMLInputElement).value,
+      telephone: (form.elements.namedItem('telephone') as HTMLInputElement).value,
+      service: (form.elements.namedItem('service') as HTMLSelectElement).value,
+      message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
+    }
+
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    })
+
+    setLoading(false)
+
+    if (res.ok) {
+      setSuccess(true)
+      form.reset()
+    } else {
+      setError(true)
+    }
+  }
+
   return (
     <main className={styles.main}>
 
@@ -10,7 +48,7 @@ export default function ContactPage() {
           Contactez<br /><em>LongCourrier</em>
         </h1>
         <p className={styles.sub}>
-          Notre équipe à Bafoussam est disponible pour répondre à toutes vos
+          Notre équipe à Douala est disponible pour répondre à toutes vos
           questions, que ce soit pour un projet BTP, immobilier ou une
           mission comptable.
         </p>
@@ -23,12 +61,12 @@ export default function ContactPage() {
           <div className={styles.infoBlock}>
             <div className={styles.infoIcon}>📍</div>
             <h4>Adresse</h4>
-            <p>Bafoussam, Cameroun</p>
+            <p>Douala, Cameroun</p>
           </div>
           <div className={styles.infoBlock}>
             <div className={styles.infoIcon}>📞</div>
             <h4>Téléphone</h4>
-            <p>+237 620 804 291</p>
+            <p>+237 6XX XXX XXX</p>
           </div>
           <div className={styles.infoBlock}>
             <div className={styles.infoIcon}>✉️</div>
@@ -39,7 +77,7 @@ export default function ContactPage() {
             <div className={styles.infoIcon}>🕐</div>
             <h4>Horaires</h4>
             <ul className={styles.hours}>
-              <li><span>Lundi – Vendredi</span><span>08h – 16h30</span></li>
+              <li><span>Lundi – Vendredi</span><span>08h – 18h</span></li>
               <li><span>Samedi</span><span>08h – 13h</span></li>
               <li><span>Dimanche</span><span>Fermé</span></li>
             </ul>
@@ -50,7 +88,20 @@ export default function ContactPage() {
         <div className={styles.formWrap}>
           <h2 className={styles.formTitle}>Envoyez-nous un message</h2>
           <p className={styles.formSub}>Nous vous répondrons dans les 24h.</p>
-          <form className={styles.form}>
+
+          {success && (
+            <div className={styles.successMsg}>
+              ✅ Message envoyé ! Nous vous répondrons dans les 24h.
+            </div>
+          )}
+
+          {error && (
+            <div className={styles.errorMsg}>
+              ❌ Une erreur est survenue. Réessayez ou contactez-nous directement.
+            </div>
+          )}
+
+          <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.row}>
               <div className={styles.field}>
                 <label htmlFor="prenom">Prénom *</label>
@@ -58,7 +109,7 @@ export default function ContactPage() {
               </div>
               <div className={styles.field}>
                 <label htmlFor="nom">Nom *</label>
-                <input type="text" id="nom" name="nom" placeholder="Kamdem" required />
+                <input type="text" id="nom" name="nom" placeholder="Dupont" required />
               </div>
             </div>
             <div className={styles.field}>
@@ -91,8 +142,8 @@ export default function ContactPage() {
                 required
               />
             </div>
-            <button type="submit" className="btn-primary">
-              Envoyer le message →
+            <button type="submit" className={styles.submitBtn} disabled={loading}>
+              {loading ? 'Envoi en cours...' : 'Envoyer le message →'}
             </button>
           </form>
         </div>
