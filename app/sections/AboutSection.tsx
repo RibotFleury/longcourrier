@@ -28,7 +28,7 @@ export default function AboutSection() {
         <div className={styles.text}>
           <p className={styles.tag}>Qui sommes-nous</p>
           <h2 className={styles.title}>
-            Votre Partenaire de<br />Confiance depuis 5 ans
+            Votre Partenaire de<br />Confiance depuis toujours
           </h2>
           <p className={styles.sub}>
             Basée à Bafoussam, LongCourrier SARL est une entreprise polyvalente

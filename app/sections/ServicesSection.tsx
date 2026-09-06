@@ -22,7 +22,7 @@ const services = [
   {
     icon: '📊',
     title: 'Comptabilité & Finance',
-    desc: 'Services comptables complets pour entreprises et particuliers à Douala.',
+    desc: 'Service comptable pour entreprise et particuliers.',
     items: ['Tenue de comptabilité', 'Déclarations fiscales', 'Bilan et états financiers', 'Conseil en gestion'],
   },
   {

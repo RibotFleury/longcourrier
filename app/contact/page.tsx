@@ -48,9 +48,7 @@ export default function ContactPage() {
           Contactez<br /><em>LongCourrier</em>
         </h1>
         <p className={styles.sub}>
-          Notre équipe à Douala est disponible pour répondre à toutes vos
-          questions, que ce soit pour un projet BTP, immobilier ou une
-          mission comptable.
+          Notre équipe est disponible pour répondre à toutes vos questions, que ce soit pour un projet BTP immobilier ou  une mission comptable.
         </p>
       </div>
 
@@ -61,12 +59,12 @@ export default function ContactPage() {
           <div className={styles.infoBlock}>
             <div className={styles.infoIcon}>📍</div>
             <h4>Adresse</h4>
-            <p>Douala, Cameroun</p>
+            <p>Bafoussam, Cameroun</p>
           </div>
           <div className={styles.infoBlock}>
             <div className={styles.infoIcon}>📞</div>
             <h4>Téléphone</h4>
-            <p>+237 6XX XXX XXX</p>
+            <p>+237 620 804 291</p>
           </div>
           <div className={styles.infoBlock}>
             <div className={styles.infoIcon}>✉️</div>
