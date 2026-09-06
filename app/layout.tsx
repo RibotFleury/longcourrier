@@ -6,6 +6,9 @@ import Footer from '@/components/Footer'
 export const metadata: Metadata = {
   title: 'LongCourrier – BTP & Comptabilité | Bafoussam, Cameroun',
   description: 'Votre partenaire de confiance à Bafoussam pour la construction, l\'immobilier et la comptabilité.',
+  icons: {
+    icon: '/logo.jpeg',
+  },
 }
 
 export default function RootLayout({
