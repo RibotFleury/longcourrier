@@ -4,8 +4,8 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'LongCourrier – BTP & Comptabilité | Douala, Cameroun',
-  description: 'Votre partenaire de confiance à Douala pour la construction, l\'immobilier et la comptabilité.',
+  title: 'LongCourrier – BTP & Comptabilité | Bafoussam, Cameroun',
+  description: 'Votre partenaire de confiance à Bafoussam pour la construction, l\'immobilier et la comptabilité.',
 }
 
 export default function RootLayout({
